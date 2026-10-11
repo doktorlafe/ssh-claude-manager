@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "SessionStart": [{"hooks": [{"type": "command", "command": "sh \"$HOME/.ccm/hook.sh\" SessionStart"}]}],
+    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "sh \"$HOME/.ccm/hook.sh\" UserPromptSubmit"}]}],
+    "PreToolUse": [{"hooks": [{"type": "command", "command": "sh \"$HOME/.ccm/hook.sh\" PreToolUse"}]}],
+    "PostToolUse": [{"hooks": [{"type": "command", "command": "sh \"$HOME/.ccm/hook.sh\" PostToolUse"}]}],
+    "Notification": [{"matcher": "permission_prompt|elicitation_dialog", "hooks": [{"type": "command", "command": "sh \"$HOME/.ccm/hook.sh\" Permission"}]}],
+    "Stop": [{"hooks": [{"type": "command", "command": "sh \"$HOME/.ccm/hook.sh\" Stop"}]}],
+    "SessionEnd": [{"hooks": [{"type": "command", "command": "sh \"$HOME/.ccm/hook.sh\" SessionEnd"}]}]
+  }
+}
